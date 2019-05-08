@@ -1,0 +1,15 @@
+{
+    "name": "whapi-com-accounts-connector",
+    "version": "2.0.0",
+    "description": "The Accounts API is a collection of methods used to query a customer account. It allows the developer to retrieve account-related data such as the user account balance.",
+    "main": "component.json",
+    "dependencies": {
+        "elasticio-node": "0.0.9",
+        "elasticio-sailor-nodejs": "^2.2.1",
+        "swagger-client": "^3.8.22"
+    },
+    "author": {
+        "name": "Deutsche Telekom AG"
+    },
+    "license": "Apache-2.0"
+}

@@ -1,0 +1,45 @@
+{
+    "type": "object",
+    "properties": {
+        "apiSecret": {
+            "required": true,
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9]{19,50}$"
+        },
+        "apiTicket": {
+            "required": true,
+            "type": "string",
+            "pattern": "^[a-zA-Z][a-zA-Z0-9-]{39,100}$"
+        },
+        "apiCountryCode": {
+            "required": false,
+            "type": "string",
+            "pattern": "^(GB|ES|IT)$",
+            "default": "GB"
+        },
+        "requestBody": {
+            "items": {
+                "properties": {
+                    "flagName": {
+                        "description": "Name of the flag to set.",
+                        "type": "string"
+                    },
+                    "flagReason": {
+                        "description": "The reason that the flag has been set.",
+                        "type": "string"
+                    },
+                    "flagValue": {
+                        "description": "Value to set the flag to.",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "flagName",
+                    "flagValue"
+                ],
+                "type": "object"
+            },
+            "type": "array"
+        }
+    }
+}
